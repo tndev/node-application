@@ -1,0 +1,27 @@
+{
+  "name": "node-application",
+  "version": "0.0.0",
+  "description": "application boilerplate with support to start stop restart as daemon",
+  "main": "node-application.js",
+  "dependencies": {
+    "ansi": "~0.2.1",
+    "when": "~2.5.1",
+    "optimist": "~0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tndev/node-application.git"
+  },
+  "keywords": [
+    "app"
+  ],
+  "author": "Till Niese",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tndev/node-application/issues"
+  }
+}
