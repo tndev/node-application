@@ -1,6 +1,6 @@
 {
   "name": "node-application",
-  "version": "0.0.1-1",
+  "version": "0.0.2",
   "description": "application boilerplate with support to start stop restart as daemon",
   "main": "node-application.js",
   "dependencies": {

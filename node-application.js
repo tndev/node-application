@@ -9,7 +9,12 @@ var util = require('util');
 
 var App = function() {
   var appName = path.basename(process.argv[1], ".js");
-
+  this._appDir = path.dirname(process.argv[1]);
+  if( fs.existsSync(this._appDir+'/package.js' ) ) {
+    this._info = fs.readFileSync(this._appDir+'/package.js' );
+    this._info = JSON.parse(String(this._info));
+  }
+  
   this._exitCallbacks = [];
   this._runCallbacks = [];
   this._reloadCallbacks = [];
@@ -31,6 +36,9 @@ var App = function() {
 
 util.inherits(App, EventEmitter);
 
+App.prototype.version = function() {
+  return this._info.version;
+};
 
 App.prototype._createPid = function(force) {
   try {
