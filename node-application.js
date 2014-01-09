@@ -10,8 +10,8 @@ var util = require('util');
 var App = function() {
   var appName = path.basename(process.argv[1], ".js");
   this._appDir = path.dirname(process.argv[1]);
-  if( fs.existsSync(this._appDir+'/package.js' ) ) {
-    this._info = fs.readFileSync(this._appDir+'/package.js' );
+  if( fs.existsSync(this._appDir+'/package.json' ) ) {
+    this._info = fs.readFileSync(this._appDir+'/package.json' );
     this._info = JSON.parse(String(this._info));
   }
   
